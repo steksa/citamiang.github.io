@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <title>Website Resmi Desa Citamiang - Dalam Pengembangan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script><!-- Canva SDKs -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+      body {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Simple keyframe for the construction icon bounce */
+      @keyframes subtle-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      .icon-bounce {
+        animation: subtle-bounce 2.5s ease-in-out infinite;
+      }
+
+      /* Focus outline for accessibility */
+      .focus-visible-outline:focus-visible {
+        outline: 2px solid #f97316;
+        outline-offset: 3px;
+      }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="w-full h-full">
+  <header class="sr-only">
+   <h1>Website Resmi Pemerintah Desa Citamiang - Dalam Pengembangan</h1>
+  </header>
+  <main id="app-root" class="w-full h-full flex items-center justify-center px-4" role="main">
+   <div id="page-wrapper" class="w-full max-w-3xl rounded-3xl shadow-xl border border-white/10 relative overflow-hidden"><!-- Background gradient overlay for depth -->
+    <div id="background-accent" class="absolute inset-0 opacity-60 pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col md:flex-row gap-8 md:gap-10 p-6 md:p-10"><!-- Left: Illustration -->
+     <aside class="flex-1 flex items-center justify-center" aria-hidden="true">
+      <div id="illustration-card" class="w-full max-w-xs rounded-2xl px-6 py-8 flex flex-col items-center gap-4 shadow-lg"><!-- Simple construction SVG icon -->
+       <div class="w-24 h-24 rounded-full flex items-center justify-center icon-bounce" id="icon-circle">
+        <svg class="w-14 h-14" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><!-- Helmet --> <path id="helmet-top" d="M8 32c0-10.5 7.6-19 17.1-20.7L27 20h10l1.9-8.7C48.4 13 56 21.5 56 32v4H8v-4z" /> <!-- Helmet band --> <rect id="helmet-band" x="10" y="32" width="44" height="6" rx="2" ry="2" /> <!-- Base --> <rect id="helmet-base" x="14" y="40" width="36" height="6" rx="2" ry="2" /> <!-- Small bolt --> <circle id="helmet-bolt" cx="24" cy="35" r="1.4" /> <circle id="helmet-bolt-2" cx="40" cy="35" r="1.4" />
+        </svg>
+       </div>
+       <div class="text-center space-y-1">
+        <p id="mini-tagline" class="text-xs tracking-[0.2em] uppercase">Dalam Pengembangan</p>
+        <p id="mini-text" class="text-xs opacity-90">Portal digital untuk melayani masyarakat Desa Citamiang.</p>
+       </div>
+      </div>
+     </aside><!-- Right: Text content -->
+     <section class="flex-1 flex flex-col gap-4 md:gap-5">
+      <div class="space-y-2">
+       <p id="eyebrow" class="text-xs tracking-[0.25em] uppercase">Segera Hadir</p>
+       <h2 id="main-title" class="font-semibold leading-tight">Situs Sedang Dalam Pengembangan</h2>
+       <p id="subtitle" class="opacity-90">Kami sedang menyiapkan sesuatu yang spesial untuk Anda.</p>
+      </div>
+      <p id="description" class="opacity-90 text-sm">Terima kasih atas kesabaran dan dukungan Anda. Silakan kembali dalam beberapa waktu lagi untuk melihat pembaruan terbaru kami.</p><!-- Progress style line -->
+      <div class="mt-1 mb-1">
+       <div id="progress-track" class="w-full h-2 rounded-full bg-opacity-20 overflow-hidden">
+        <div id="progress-bar" class="h-full w-2/3 rounded-full"></div>
+       </div>
+       <p id="progress-text" class="mt-2 text-xs opacity-80">Status: Dalam proses pengembangan…</p>
+      </div><!-- Contact Information -->
+      <div class="mt-2 space-y-3">
+       <div class="space-y-2">
+        <div class="flex items-start gap-2"><span class="text-lg mt-0.5" aria-hidden="true">📍</span>
+         <div>
+          <p id="address-label" class="text-xs font-medium opacity-75 mb-0.5">Alamat Kantor Desa</p>
+          <p id="address-text" class="text-sm opacity-90">Jl. Cigawir KM. 30 - Sukabumi<br>
+            Kode Pos 43187</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-2"><span class="text-lg mt-0.5" aria-hidden="true">✉️</span>
+         <div>
+          <p id="email-label" class="text-xs font-medium opacity-75 mb-0.5">Email</p><a href="mailto:citamiangdesa@gmail.com" id="email-link" class="text-sm opacity-90 hover:opacity-100 transition-opacity underline focus-visible-outline" target="_blank" rel="noopener noreferrer"> pemdescimerang@gmail.com </a>
+         </div>
+        </div>
+       </div><button id="contact-button" type="button" class="focus-visible-outline inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium shadow-md transition-transform duration-150 active:scale-[0.97]"> <span id="contact-button-label">Hubungi Kami</span> <span aria-hidden="true">➜</span> </button>
+       <p id="contact-feedback" class="mt-2 text-xs opacity-90 hidden">✓ Silakan hubungi kami melalui email atau kunjungi kantor desa pada jam kerja.</p>
+      </div>
+      <footer class="mt-4 pt-3 border-t border-white/10">
+       <p id="footer-text" class="text-[11px] opacity-75">© 2025 Desa Citamiang. Semua hak dilindungi.</p>
+      </footer>
+     </section>
+    </div>
+   </div>
+  </main>
+  <script>
+      // --- Default configuration for editable content and styling ---
+      const defaultConfig = {
+        main_title: "Website Resmi Desa Cimerang",
+        subtitle: "Kecamatan Purabaya, Kabupaten Sukabumi",
+        description:
+          "Website resmi Pemerintah Desa Cimerang sedang dalam tahap pengembangan. Kami sedang menyiapkan portal informasi dan layanan digital untuk masyarakat Desa Cimerang.",
+        contact_cta: "Hubungi Kami",
+        footer_text: "© 2025 Pemerintah Desa Cimerang. Semua hak dilindungi.",
+        // Colors (up to 5)
+        background_color: "#020617", // BACKGROUND (slate-950)
+        surface_color: "#0f172a", // SECONDARY_SURFACE (slate-900)
+        text_color: "#e5e7eb", // TEXT (zinc-200)
+        primary_action_color: "#f97316", // PRIMARY_ACTION (orange-500)
+        secondary_action_color: "#38bdf8", // SECONDARY_ACTION (sky-400)
+        // Font options
+        font_family: "system-ui",
+        font_size: 16
+      };
+
+      // Store references to DOM elements to update them efficiently
+      const domRefs = {
+        body: document.body,
+        appRoot: document.getElementById("app-root"),
+        pageWrapper: document.getElementById("page-wrapper"),
+        backgroundAccent: document.getElementById("background-accent"),
+        illustrationCard: document.getElementById("illustration-card"),
+        iconCircle: document.getElementById("icon-circle"),
+        helmetTop: document.getElementById("helmet-top"),
+        helmetBand: document.getElementById("helmet-band"),
+        helmetBase: document.getElementById("helmet-base"),
+        helmetBolt1: document.getElementById("helmet-bolt"),
+        helmetBolt2: document.getElementById("helmet-bolt-2"),
+        miniTagline: document.getElementById("mini-tagline"),
+        miniText: document.getElementById("mini-text"),
+        eyebrow: document.getElementById("eyebrow"),
+        mainTitle: document.getElementById("main-title"),
+        subtitle: document.getElementById("subtitle"),
+        description: document.getElementById("description"),
+        progressTrack: document.getElementById("progress-track"),
+        progressBar: document.getElementById("progress-bar"),
+        progressText: document.getElementById("progress-text"),
+        contactButton: document.getElementById("contact-button"),
+        contactButtonLabel: document.getElementById("contact-button-label"),
+        contactFeedback: document.getElementById("contact-feedback"),
+        footerText: document.getElementById("footer-text")
+      };
+
+      // Apply configuration to the UI
+      async function applyConfig(config) {
+        const merged = Object.assign({}, defaultConfig, config || {});
+
+        const bg = merged.background_color || defaultConfig.background_color;
+        const surface = merged.surface_color || defaultConfig.surface_color;
+        const text = merged.text_color || defaultConfig.text_color;
+        const primary = merged.primary_action_color || defaultConfig.primary_action_color;
+        const secondary =
+          merged.secondary_action_color || defaultConfig.secondary_action_color;
+        const baseFontSize = merged.font_size || defaultConfig.font_size;
+        const customFont = merged.font_family || defaultConfig.font_family;
+        const fontStack = customFont + ", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+
+        // Backgrounds and surfaces
+        domRefs.body.style.backgroundColor = bg;
+        domRefs.appRoot.style.backgroundColor = bg;
+        domRefs.pageWrapper.style.backgroundColor = surface;
+        domRefs.backgroundAccent.style.background =
+          "radial-gradient(circle at top left, " +
+          secondary +
+          "33, transparent 55%), radial-gradient(circle at bottom right, " +
+          primary +
+          "2b, transparent 60%)";
+
+        domRefs.illustrationCard.style.backgroundColor = bg;
+        domRefs.iconCircle.style.backgroundColor = primary + "26"; // subtle
+
+        // SVG colors
+        domRefs.helmetTop.style.fill = primary;
+        domRefs.helmetBand.style.fill = surface;
+        domRefs.helmetBase.style.fill = surface;
+        domRefs.helmetBolt1.style.fill = text;
+        domRefs.helmetBolt2.style.fill = text;
+
+        // Text coloring
+        [
+          domRefs.miniTagline,
+          domRefs.miniText,
+          domRefs.eyebrow,
+          domRefs.mainTitle,
+          domRefs.subtitle,
+          domRefs.description,
+          domRefs.progressText,
+          domRefs.contactButtonLabel,
+          domRefs.footerText
+        ].forEach(function (el) {
+          if (el) {
+            el.style.color = text;
+          }
+        });
+
+        // Contact info styling
+        var addressLabel = document.getElementById("address-label");
+        var addressText = document.getElementById("address-text");
+        var emailLabel = document.getElementById("email-label");
+        var emailLink = document.getElementById("email-link");
+        
+        if (addressLabel) addressLabel.style.color = text;
+        if (addressText) addressText.style.color = text;
+        if (emailLabel) emailLabel.style.color = text;
+        if (emailLink) {
+          emailLink.style.color = secondary;
+        }
+
+        // Special accent text
+        domRefs.miniTagline.style.color = secondary;
+        domRefs.eyebrow.style.color = secondary;
+        domRefs.progressText.style.color = text;
+
+        // Progress bar
+        domRefs.progressTrack.style.backgroundColor = text + "1a";
+        domRefs.progressBar.style.backgroundColor = primary;
+
+        // Button colors
+        domRefs.contactButton.style.backgroundColor = primary;
+        domRefs.contactButton.style.color = "#020617";
+        domRefs.contactButton.style.borderColor = primary;
+
+        // Typography & font sizes
+        const hScale = 1.9;
+        const subScale = 1.25;
+        const smallScale = 0.85;
+        const tinyScale = 0.75;
+
+        domRefs.mainTitle.style.fontFamily = fontStack;
+        domRefs.subtitle.style.fontFamily = fontStack;
+        domRefs.description.style.fontFamily = fontStack;
+        domRefs.footerText.style.fontFamily = fontStack;
+        domRefs.progressText.style.fontFamily = fontStack;
+        domRefs.miniTagline.style.fontFamily = fontStack;
+        domRefs.miniText.style.fontFamily = fontStack;
+        domRefs.eyebrow.style.fontFamily = fontStack;
+        domRefs.contactButtonLabel.style.fontFamily = fontStack;
+
+        domRefs.mainTitle.style.fontSize = baseFontSize * hScale + "px";
+        domRefs.subtitle.style.fontSize = baseFontSize * subScale + "px";
+        domRefs.description.style.fontSize = baseFontSize + "px";
+        domRefs.progressText.style.fontSize = baseFontSize * tinyScale + "px";
+        domRefs.footerText.style.fontSize = baseFontSize * tinyScale + "px";
+        domRefs.miniTagline.style.fontSize = baseFontSize * tinyScale + "px";
+        domRefs.miniText.style.fontSize = baseFontSize * smallScale + "px";
+        domRefs.eyebrow.style.fontSize = baseFontSize * tinyScale + "px";
+        domRefs.contactButtonLabel.style.fontSize = baseFontSize * smallScale + "px";
+
+        // Text content
+        domRefs.mainTitle.textContent =
+          merged.main_title || defaultConfig.main_title;
+        domRefs.subtitle.textContent =
+          merged.subtitle || defaultConfig.subtitle;
+        domRefs.description.textContent =
+          merged.description || defaultConfig.description;
+        domRefs.contactButtonLabel.textContent =
+          merged.contact_cta || defaultConfig.contact_cta;
+        domRefs.footerText.textContent =
+          merged.footer_text || defaultConfig.footer_text;
+      }
+
+      // Initialize Element SDK for editability
+      (function initElementSdk() {
+        if (!window.elementSdk) {
+          // SDK might not be present (e.g., preview in some contexts); still render defaults
+          applyConfig(defaultConfig);
+          return;
+        }
+
+        window.elementSdk.init({
+          defaultConfig: defaultConfig,
+          onConfigChange: async function (config) {
+            await applyConfig(config);
+          },
+          mapToCapabilities: function (config) {
+            const current = Object.assign({}, defaultConfig, config || {});
+            return {
+              recolorables: [
+                {
+                  get: function () {
+                    return (
+                      current.background_color || defaultConfig.background_color
+                    );
+                  },
+                  set: function (value) {
+                    window.elementSdk.setConfig({ background_color: value });
+                  }
+                },
+                {
+                  get: function () {
+                    return current.surface_color || defaultConfig.surface_color;
+                  },
+                  set: function (value) {
+                    window.elementSdk.setConfig({ surface_color: value });
+                  }
+                },
+                {
+                  get: function () {
+                    return current.text_color || defaultConfig.text_color;
+                  },
+                  set: function (value) {
+                    window.elementSdk.setConfig({ text_color: value });
+                  }
+                },
+                {
+                  get: function () {
+                    return (
+                      current.primary_action_color ||
+                      defaultConfig.primary_action_color
+                    );
+                  },
+                  set: function (value) {
+                    window.elementSdk.setConfig({
+                      primary_action_color: value
+                    });
+                  }
+                },
+                {
+                  get: function () {
+                    return (
+                      current.secondary_action_color ||
+                      defaultConfig.secondary_action_color
+                    );
+                  },
+                  set: function (value) {
+                    window.elementSdk.setConfig({
+                      secondary_action_color: value
+                    });
+                  }
+                }
+              ],
+              borderables: [],
+              fontEditable: {
+                get: function () {
+                  return current.font_family || defaultConfig.font_family;
+                },
+                set: function (value) {
+                  window.elementSdk.setConfig({ font_family: value });
+                }
+              },
+              fontSizeable: {
+                get: function () {
+                  return current.font_size || defaultConfig.font_size;
+                },
+                set: function (value) {
+                  // Ensure numeric value
+                  var numeric = Number(value);
+                  if (!isNaN(numeric) && numeric > 8 && numeric < 40) {
+                    window.elementSdk.setConfig({ font_size: numeric });
+                  }
+                }
+              }
+            };
+          },
+          mapToEditPanelValues: function (config) {
+            var merged = Object.assign({}, defaultConfig, config || {});
+            return new Map([
+              ["main_title", merged.main_title],
+              ["subtitle", merged.subtitle],
+              ["description", merged.description],
+              ["contact_cta", merged.contact_cta],
+              ["footer_text", merged.footer_text]
+            ]);
+          }
+        });
+      })();
+
+      // Simple inline behaviour for the "Hubungi Kami" button:
+      // show a short helper text with contact confirmation.
+      domRefs.contactButton.addEventListener("click", function () {
+        domRefs.contactFeedback.classList.remove("hidden");
+        setTimeout(function() {
+          domRefs.contactFeedback.classList.add("hidden");
+        }, 5000);
+      });
+
+      // Initial render for environments where SDK may be slow or absent
+      applyConfig(defaultConfig);
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab32b5dc5157975',t:'MTc2NTI2OTMyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
